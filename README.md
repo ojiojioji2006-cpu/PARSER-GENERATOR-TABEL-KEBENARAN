@@ -1,89 +1,19 @@
-Berikut panduan langkah demi langkah (*step-by-step*) untuk menginstal kebutuhan dan menjalankan aplikasi **Klasifikasi Himpunan Mahasiswa**:
+# Parser & Generator Tabel Kebenaran Otomatis (PJBL-1 · Sesi 2)
 
----
+Aplikasi pemroses ekspresi logika proposisional dan pembangkit tabel kebenaran otomatis menggunakan **Python 3** (`re`, `itertools`) dan antarmuka web interaktif (**Truth Table Studio**).
 
-### 1. Pastikan Python Sudah Terinstal
+## Anggota Kelompok — F Gyaneswar
+1. **Hasdan Fauji** (25210060)
+2. **Intan Farida** (25210002)
+3. **Riski Maulana** (25210051)
 
-Pastikan Python (versi 3.10 atau yang lebih baru) sudah terpasang di komputer/laptop.
-Buka **PowerShell** atau **Terminal**, lalu cek dengan perintah:
+## Link Aplikasi Web Interaktif
+🔗 **[Buka Truth Table Studio (Live Demo)](https://ojiojioji2006-cpu.github.io/PARSER-GENERATOR-TABEL-KEBENARAN/)**
 
-```powershell
-python --version
-
-```
-
----
-
-### 2. Buka Terminal di Folder Proyek
-
-Masuk ke direktori/folder proyek `Klasifikasi-Himpunan-Mahasiswa-Kelompok-F` menggunakan PowerShell atau Terminal bawaan VS Code.
-
----
-
-### 3. (Opsional) Buat & Aktifkan Virtual Environment
-
-Sangat disarankan membuat *virtual environment* agar pustaka (*library*) proyek tersimpan rapi dan tidak bentrok dengan instalasi Python bawaan:
-
-```powershell
-# 1. Buat virtual environment bernama venv
-python -m venv venv
-
-# 2. Aktifkan venv di Windows (PowerShell)
-.\venv\Scripts\activate
-
-```
-
-*(Jika venv berhasil aktif, akan muncul tanda `(venv)` di sebelah kiri terminal).*
-
----
-
-### 4. Install Dependensi / Library yang Dibutuhkan
-
-Install modul `streamlit` dan `pandas` menggunakan file `requirements.txt`:
-
-```powershell
-pip install -r requirements.txt
-
-```
-
-Atau jika ingin menginstal modul secara langsung:
-
-```powershell
-pip install streamlit pandas
-
-```
-
----
-
-### 5. Jalankan Aplikasi
-
-Eksekusi perintah berikut untuk membuka aplikasi di browser:
-
-```powershell
-python -m streamlit run app.py
-
-```
-
-Aplikasi akan otomatis terbuka di browser pada alamat **`http://localhost:8501`**.
-
-
-```markdown
-## 🚀 Cara Menjalankan Aplikasi
-
-1. **Clone Repositori:**
-   ```bash
-   git clone [https://github.com/ojiojioji2006-cpu/Klasifikasi-Himpunan-Mahasiswa-Kelompok-F.git](https://github.com/ojiojioji2006-cpu/Klasifikasi-Himpunan-Mahasiswa-Kelompok-F.git)
-   cd Klasifikasi-Himpunan-Mahasiswa-Kelompok-F
-
-```
-
-2. **Install Dependensi:**
+## Cara Menjalankan Kode Python di Terminal
 ```bash
-pip install -r requirements.txt
+# Menjalankan 2 kasus uji laporan PJBL-1
+python truth_table_generator.py
 
-```
-
-
-3. **Jalankan Aplikasi:**
-```bash
-python -m streamlit run app.py
+# Menjalankan mode input ekspresi interaktif
+python truth_table_generator.py --interactive
